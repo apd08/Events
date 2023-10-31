@@ -1,0 +1,207 @@
+
+.clear{
+    clear: both;
+}
+
+.mesage_error{
+    color: #cc0000;
+}
+
+.success_message{
+    color: green;
+}
+
+.block_for_messages{
+    text-align: center;
+}
+
+/* #header, #footer{
+    border: 2px solid #000;
+} */
+#footer{
+    border: 2px solid #000;
+}
+
+#header{
+    /* padding-left: 10px; */
+    margin: -7px; /*странно, но в опере только так работает*/
+    /* padding: 0; */
+    width: 100%;
+    background-color: #333D52;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap; /**/
+    flex-direction: row; /**/
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+#header h2, #footer h2{
+    text-align: center;
+    margin: 0;
+}
+
+#auth_block{
+    width: 290px;
+    float: right;
+    text-align: center;
+}
+
+#auth_block a{
+    display: block;
+  /*  padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    width: 110px;
+    height: 30px;
+    text-decoration: none; */
+    width: 80px;
+    padding: 4px 16px 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f4f5f5;
+    border: 1px solid rgba(203, 202, 202, 0.347);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+#auth_block a:hover{
+    /* text-decoration: underline; */
+    background-color: rgba(203, 202, 202, 0.347); 
+}
+
+#link_register{
+    margin-left: 30px;
+    float: left;
+}
+
+#link_auth, #link_logout{
+    float: right;
+}
+
+/* #link_register a{
+    background: #54d854;
+} */
+
+/* #link_auth a, #link_logout a{
+    background: #4e4eec;
+    text-align: center;
+    width: 80px;
+} */
+
+/* Блок с формой регистрации */
+#form_register, #form_auth{
+    width: 500px;
+    margin: 0 auto;
+    /**/
+    /* width: 80%;
+	margin: auto;
+	margin-top: 2.5%;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.87); */
+}
+
+
+#authorized h2{
+    text-align: center;
+}
+
+/* @font-face {
+    font-family: 'Tilt Neon', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+} */
+
+/*header*/
+.header_logo{
+    font-family: 'Tilt Neon', sans-serif;
+    text-decoration: none;
+    padding-left: 200px;
+}
+.logo_text{
+    font-family: 'Tilt Neon', sans-serif;
+    color: #f4f5f5;;
+}
+
+.place_link{
+    text-decoration: none;
+    color: #f4f5f5;;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 650px;
+}
+.fa-location-dot{
+    margin-right: 5px;
+}
+.bookmark_link{
+    text-decoration: none;
+    color: #f4f5f5;
+    display: flex;
+}
+.fa-bookmark{
+    margin-right: 5px;
+
+}
+
+/*registration-form*/
+.form-box{
+    width: 80%;
+	margin: auto;
+	margin-top: 2.5%;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.87);
+}
+.form-label {
+	float: left;
+	width: 10em;
+	line-height: 2.15em;
+	margin-right: 1em;
+	text-align: right;
+}
+
+.input-holder {
+	display: inline-block;
+	background-color: #E0F7FA;
+	border-radius: 0.25em;
+
+	border: 1px solid #80DEEA;
+}
+
+.input-holder input[type='text'], 
+.input-holder input[type='password'], 
+.input-holder input[type='radio'], 
+.input-holder input[type='email'],
+#login-block input[type='submit'], 
+.input-holder select 
+{
+	border: none;
+	outline: none;
+
+	font-size: 1em;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.87);
+
+	margin: 0;
+	padding: 0.5em;
+
+	background-color: #E0F7FA;
+
+	border-radius: 0.25em;
+	box-shadow: 0 0 15px #4DD0E1;
+}
+
+.input-holder > input:focus, 
+.input-holder > select:focus {
+	box-shadow: 0 0 5px #4DD0E1;
+}
+
+/*поменять регистрацию и авторизация*/
