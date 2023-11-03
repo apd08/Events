@@ -1,4 +1,3 @@
-<!-- для различий после авторизации -->
 <?php
     //Запускаем сессию
     session_start();
@@ -90,7 +89,7 @@
             <div id="auth_block">
             <?php
                 //Проверяем авторизован ли пользователь
-                if(!isset($_SESSION['email']) && !isset($_SESSION['password'])){
+                if(!isset($_SESSION['Email']) && !isset($_SESSION['Пароль'])){
                     // если нет, то выводим блок с ссылками на страницу регистрации и авторизации
             ?>
                     <div id="link_register">
@@ -104,6 +103,9 @@
                 }else{
                     //Если пользователь авторизован, то выводим ссылку Выход
             ?> 
+                    <div id="link_event">
+                        <a href="/form_event.php">Добавить мероприятие</a>
+                    </div>
                     <div id="link_logout">
                         <a href="/logout.php">Выход</a>
                     </div>

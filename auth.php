@@ -148,7 +148,20 @@
             $password=$_POST["password"];
             //Запрос в БД на выборке пользователя.
             $result_query_select = $mysqli->query("SELECT * FROM `Пользователи` WHERE Email = '".$email."' AND Пароль = '".$password."'");
+            // $result_query_select_admin = $mysqli->query("SELECT * FROM `Пользователи` WHERE Email ='admin@gmail.com'  AND Пароль = 'adpasswordmin'");
+
+            // if(!$result_query_select_admin)
+            if($email=='admin@gmail.com' && $password=='adpasswordmin'){
+                    $_SESSION['Email'] = $email;
+                    $_SESSION['Пароль'] = $password;
              
+                    //Возвращаем пользователя на главную страницу
+                    header("HTTP/1.1 301 Moved Permanently");
+                    header("Location: ".$address_site."/index_admin.php");
+                }
+                else{
+
+                     // if(!$result_query_select_admin)
             if(!$result_query_select){
                 // Сохраняем в сессию сообщение об ошибке. 
                 $_SESSION["error_messages"] .= "<p class='mesage_error' >Ошибка запроса на выборке пользователя из БД</p>";
@@ -160,7 +173,15 @@
                 //Останавливаем скрипт
                 exit();
             }else{
+                // if($result_query_select_admin->num_rows == 1){
+                //     // $_SESSION['Email'] = $email;
+                //     // $_SESSION['Пароль'] = $password;
              
+                //     //Возвращаем пользователя на главную страницу
+                //     header("HTTP/1.1 301 Moved Permanently");
+                //     header("Location: ".$address_site."/index_admin.php");
+                // }
+                // else{
                 //Проверяем, если в базе нет пользователя с такими данными, то выводим сообщение об ошибке
                 if($result_query_select->num_rows == 1){
                      
@@ -185,6 +206,7 @@
                     exit();
                 }
             }
+        }
         }else{
             //Если капча не передана
             exit("<p><strong>Ошибка!</strong> Отсутствует проверочный код, то есть код капчи. Вы можете перейти на <a href=".$address_site."> главную страницу </a>.</p>");
