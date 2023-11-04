@@ -26,9 +26,9 @@
 <div id="form_register">
             <h2>Добавление мероприятия</h2> <!--Форма добавления мероприятия-->
  
-            <form action="addEvent.php" method="post" name="form_event">
+            <form action="addEvent.php" method="post" name="form_event"> 
                 <div class="form-box">
-                        <label for="form_event_name" class="form-label"> Название мероприятия: </label>
+                        <label for="form_event_name" class="form-label"> Название мероприятия: </label><!---->
                         <div class="input-holder">
                             <input type="text" name="name" required="required" id="form_event_name">
                         </div>

@@ -1,6 +1,7 @@
 <?php
     //Запускаем сессию
     session_start();
+    require_once("dbconnect.php");
 ?>
  
 <!DOCTYPE html>
@@ -75,7 +76,7 @@
  
         <div id="header">
  
-            <a href="/index.php" class="header_logo"><p class="logo_text">ТвояАфиша</p></a>
+            <a href="/index_admin.php" class="header_logo"><p class="logo_text">ТвояАфиша</p></a>
 
             <a href="#" class="place_link">
                 <i class="fa-solid fa-location-dot" style="color: #f4f5f5;"></i>

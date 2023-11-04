@@ -1,6 +1,7 @@
 <?php
     //Запускаем сессию
     session_start();
+    require_once("dbconnect.php");
 ?>
  
 <!DOCTYPE html>
@@ -81,10 +82,7 @@
                 <i class="fa-solid fa-location-dot" style="color: #f4f5f5;"></i>
                 <div class="header_place_text">Минск</div>
             </a>
-            <a href="#" class="bookmark_link">
-                <i class="fa-solid fa-bookmark" style="color: #f4f5f5;"></i>
-                <div class="header_bookmark_text">Избранное</div>
-            </a>
+
 
             <div id="auth_block">
             <?php
@@ -102,13 +100,23 @@
             <?php
                 }else{
                     //Если пользователь авторизован, то выводим ссылку Выход
-            ?> 
+            ?> </div>
+                        <a href="#" class="bookmark_link">
+                <i class="fa-solid fa-bookmark" style="color: #f4f5f5;"></i>
+                <div class="header_bookmark_text">Избранное</div>
+            </a>
+            <div id="auth_block">
                     <div id="link_logout">
                         <a href="/logout.php">Выход</a>
                     </div>
+                    </div>
+                </div>
+                
+
             <?php
                 }
             ?>
             </div>
+
              <div class="clear"></div>
         </div>
