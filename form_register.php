@@ -28,6 +28,7 @@
     //иначе выводим сообщение о том, что он уже зарегистрирован
     if(!isset($_SESSION["email"]) && !isset($_SESSION["password"])){
 ?>
+ <div class="clearing">
         <div id="form_register">
             <h2>Регистрация</h2> <!--Ф
             орма регистрации-->
@@ -46,7 +47,7 @@
                             <input type="text" name="last_name" required="required" id="form_register_last_name">
                         </div>
                     </div>
-              
+            
                     <div class="form-box">
                     <label for="form_register_email" class="form-label">Email: </label>
                         <div class="input-holder">
@@ -80,6 +81,7 @@
                 
             </form>
         </div>
+    </div>
 <?php
     }else{
 ?>

@@ -9,7 +9,8 @@
     <head>
         <title>Название нашего сайта</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./css/style2.css">
+        <link rel="stylesheet" type="text/css" href="./css/reset.css">
         <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
         <script src="https://kit.fontawesome.com/6aaabd05e2.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -75,7 +76,7 @@
     <body>
  
         <div id="header">
- 
+            <div class="header_main"></div>
             <a href="/index.php" class="header_logo"><p class="logo_text">ТвояАфиша</p></a>
 
             <a href="#" class="place_link">
@@ -101,7 +102,7 @@
                 }else{
                     //Если пользователь авторизован, то выводим ссылку Выход
             ?> </div>
-                        <a href="#" class="bookmark_link">
+                        <a href="list_favourites.php" class="bookmark_link">
                 <i class="fa-solid fa-bookmark" style="color: #f4f5f5;"></i>
                 <div class="header_bookmark_text">Избранное</div>
             </a>
@@ -119,4 +120,11 @@
             </div>
 
              <div class="clear"></div>
+             
         </div>
+        <div id="content_wrapper">
+                <!-- <img id="background" src="img/back1.jpg" alt=""> -->
+                    <div class="text">  <div class="title_text">Афиша мероприятий минска</div>
+                    <div class="text_m">Добро пожаловать на наш сайт, посвященный мероприятиям в Минске! Если вы ищете волнующее музыкальное выступление, захватывающий спортивный матч или уникальное культурное событие, вы попали по адресу. Мы предлагаем широкий выбор разнообразных мероприятий в Минске. </div></div>
+                    <div class="images"></div>
+            </div>

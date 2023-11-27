@@ -22,11 +22,12 @@
         }
     ?>
 </div>
-
-<div id="form_register">
+<div class="clearing_admin">
+<div id="form_register" class="form_add" >
             <h2>Добавление мероприятия</h2> <!--Форма добавления мероприятия-->
  
             <form action="addEvent.php" method="post" name="form_event"> 
+                <div class="first_line">
                 <div class="form-box">
                         <label for="form_event_name" class="form-label"> Название мероприятия: </label><!---->
                         <div class="input-holder">
@@ -48,8 +49,10 @@
                             <span  class="mesage_error"></span><!--id="valid_email_message"-->
                         </div>
                     </div>
-              
-                    <div class="form-box">
+                </div>
+          
+                <div class="second_line">
+                <div class="form-box">
                     <label for="form_event_information" class="form-label">Контактная информация: </label>
                         <div class="input-holder">
                             <input type="text" name="information" required="required" id="form_event_information"><br>
@@ -63,24 +66,15 @@
                                 <input type="text" name="description" required="required" id="form_event_description">
                         </div>
                     </div>
-
-                    <!-- <div class="form-box">
-                    <label for="form_event_information" class="form-label">Контактная информация: </label>
-                        <div class="input-holder">
-                                <input type="text" name="information" required="required" id="form_event_information">
-                        </div>
-                    </div> -->
-
-                    
-
-                    <!-- из других таблиц -->
                     <div class="form-box"> <!--Место проведения-->
                     <label for="form_event_place" class="form-label">Адрес: </label>
                         <div class="input-holder">
                                 <input type="text" name="place" required="required" id="form_event_place">
                         </div>
                     </div>
-
+                </div>
+                
+                <div class="therd_line">
                     <div class="form-box">
                     <label for="form_event_type" class="form-label">Тип мероприятия: </label>
                         <div class="input-holder">
@@ -94,34 +88,42 @@
                                 <option value="Другое">Другое</option>
                             </select>
                         </div>
-                    </div>
+                    
+                </div>
 
                     <div class="form-box">
                     <label for="form_event_cost" class="form-label">Стоимость: </label>
                         <div class="input-holder">
                                 <input type="text" name="cost" required="required" id="form_event_cost">
                         </div>
-                    </div>
+                    </div></div>
 
-                    <h3>Организатор</h3>
-                    <div class="form-box">
+                    
+                    <div class="fours_line"> 
+                        <h3>Организатор</h3>
+                        <div class="last_line">
+                        <div class="form-box">
                     <label for="form_event_organizer" class="form-label">Контакты: </label>
                         <div class="input-holder">
                                 <input type="text" name="organizer" required="required" id="form_event_organizer">
                         </div>
                     </div>
-
+                    
                     <div class="form-box">
                     <label for="form_event_organizerName" class="form-label">Название организации: </label>
                         <div class="input-holder">
                                 <input type="text" name="organizerName" required="required" id="form_event_organizer">
                         </div>
                     </div>
+                    </div>
+                    
 
                     <td colspan="2">
                             <input type="submit" name="btn_submit_event" value="Добавить мероприятие">
                         </td>
-                    </tr>
+                    </tr></div>
+                   
                 
             </form>
         </div>
+</div>

@@ -11,10 +11,11 @@
     foreach($pushEvents as  $event){
 ?>
 <!-- form_event контейнер для каждой формочки (я для наглядности добавила ему границы в css) -->
+<!-- <div class="ticket_line"></div> -->
+<div class="clearing_admin">
+
 <div class="form_event">
-    <div class="link_delete"> <!---закрыла в конце вместе с form_event-->
-        <a href="delete.php?id=<?=$event[0]?>">Удалить</a>
-    
+  
     <div class="information">
         <p>Название Мероприятия:</p>
         <p><?=$event[1]?></p>
@@ -56,8 +57,20 @@
         <p>Стоимость:</p>
         <p><?=$cost[3]?></p>
     </div>
+    <div class="event_ad_btn">
+    <div class="link_delete"> <!---закрыла в конце вместе с form_event-->
+        <a href="delete.php?id=<?=$event[0]?>">Удалить</a>
+    
+        
     </div>
+    <div class="link_update">
+            <a href="form_update.php?id=<?=$event[0]?>">Изменить</a>
+        </div>
+    </div>
+   
 </div>
+</div>
+<div class="ticket_line"></div
 <?php
         }
     }

@@ -147,7 +147,8 @@
             $email=$_POST["email"];
             $password=$_POST["password"];
             //Запрос в БД на выборке пользователя.
-            $result_query_select = $mysqli->query("SELECT * FROM `Пользователи` WHERE Email = '".$email."' AND Пароль = '".$password."'");
+            $result_query_select = $mysqli->query("SELECT Пользователи_id FROM `Пользователи` WHERE Email = '".$email."' AND Пароль = '".$password."'");
+           // $user_id=$mysqli->insert_id;
             // $result_query_select_admin = $mysqli->query("SELECT * FROM `Пользователи` WHERE Email ='admin@gmail.com'  AND Пароль = 'adpasswordmin'");
 
             // if(!$result_query_select_admin)
@@ -185,9 +186,12 @@
                 //Проверяем, если в базе нет пользователя с такими данными, то выводим сообщение об ошибке
                 if($result_query_select->num_rows == 1){
                      
+                    $row = $result_query_select->fetch_assoc();
+                    $user_id = $row['Пользователи_id'];
                     // Если введенные данные совпадают с данными из базы, то сохраняем логин и пароль в массив сессий.
                     $_SESSION['Email'] = $email;
                     $_SESSION['Пароль'] = $password;
+                    $_SESSION['Пользователи_id'] = $user_id;
              
                     //Возвращаем пользователя на главную страницу
                     header("HTTP/1.1 301 Moved Permanently");

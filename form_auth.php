@@ -29,47 +29,44 @@
     if(!isset($_SESSION["email"]) && !isset($_SESSION["password"])){
 ?>
  
- 
-    <div id="form_auth">
-        <h2>Вход в аккаунт</h2>
-        <form action="auth.php" method="post" name="form_auth">
-            <table>
-          
-                <tbody><tr>
-                    <td> Email: </td>
-                    <td>
-                        <input type="email" name="email" required="required"><br>
-                        <span id="valid_email_message" class="mesage_error"></span>
-                    </td>
-                </tr>
-          
-                <tr>
-                    <td> Пароль: </td>
-                    <td>
-                        <input type="password" name="password" placeholder="минимум 6 символов" required="required"><br>
-                        <span id="valid_password_message" class="mesage_error"></span>
-                    </td>
-                </tr>
-                 
-                <tr>
-                    <td> Введите капчу: </td>
-                    <td>
-                        <p>
-                            <img src="captcha.php" alt="Изображение капчи" /> <br>
-                            <input type="text" name="captcha" placeholder="Проверочный код">
-                        </p>
-                    </td>
-                </tr>
- 
-                <tr>
-                    <td colspan="2">
+ <div class="clearing">
+        <div id="form_auth">
+            <h2>Вход в аккаунт</h2>
+            <form action="auth.php" method="post" name="form_auth">
+            <div class="form-box">
+                    <label for="form_auth_email" class="form-label">Email: </label>
+                        <div class="input-holder">
+                            <input type="email" name="email" required="required" id="form_register_email"><br> <!--id = for in label-->
+                            <span id="valid_email_message" class="mesage_error"></span>
+                        </div>
+                    </div>
+              
+                    <div class="form-box">
+                    <label for="form_auth_password" class="form-label">Пароль: </label>
+                        <div class="input-holder">
+                            <input type="password" name="password" placeholder="минимум 6 символов" required="required" id="form_register_password"><br>
+                            <span id="valid_password_message" class="mesage_error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-box">
+                    <label for="form_auth_cap" class="form-label">Введите капчу: </label>
+                        <div class="input-holder">
+                            <p>
+                                <img src="captcha.php" alt="Капча" /> <br><br>
+                                <input type="text" name="captcha" placeholder="Проверочный код" required="required" id="form_register_cap">
+                            </p>
+                        </div>
+                    </div>
+                    
+                        <td colspan="2">
                         <input type="submit" name="btn_submit_auth" value="Войти">
-                    </td>
-                </tr>
-            </tbody></table>
-        </form>
+                        </td>
+                    </tr>
+                
+            </form>
+        </div>
     </div>
- 
 <?php
     }else{
 ?>

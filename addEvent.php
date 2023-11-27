@@ -323,7 +323,7 @@
                 //Проверяем переменную на пустоту
                 if(!empty($organizerName)){
                     // Для безопасности, преобразуем специальные символы в HTML-сущности
-                    $organizer = htmlspecialchars($organizerName, ENT_QUOTES);
+                    $organizerName = htmlspecialchars($organizerName, ENT_QUOTES);
                 }else{
                     // Сохраняем в сессию сообщение об ошибке. 
                     $_SESSION["error_messages"] .= "<p class='mesage_error'>Укажите организатора мероприятия</p>";
@@ -360,7 +360,7 @@
             $type=$_POST["type"];
             $cost=$_POST["cost"];
             $organizer=$_POST["organizer"];
-            $organizerName = $_POST["organazerName"];
+            $organizerName = $_POST["organizerName"];
 
             //на вставку в таблицу Место_проведения
             $result_place_query= $mysqli -> query("INSERT INTO `Место_проведения` (Адрес) VALUES ('".$place."')");
@@ -382,12 +382,11 @@
 
             $result_cost_insert = $mysqli->query("INSERT INTO `Вид_билета` (Категория_посетителя_FK, Мероприятие_FK, Стоимость) VALUES ('".$category_id."' , '".$event_id."' , '".$cost."')");
 
-
             if(!$result_event_insert){
                 // Сохраняем в сессию сообщение об ошибке. 
                 $_SESSION["error_messages"] .= "<p class='mesage_error' >Ошибка запроса на добавления мероприятия в БД</p>";
-                // echo "Ошибка: " . $mysqli->error; //это если надо выводит конкретную ошибку почему не проходит запрос на добавление
-             //   exit();
+                echo "Ошибка: " . $mysqli->error; //это если надо выводит конкретную ошибку почему не проходит запрос на добавление
+               exit();
                 
                 //Возвращаем пользователя на страницу регистрации
                 header("HTTP/1.1 301 Moved Permanently");
@@ -397,7 +396,7 @@
                 exit();
             }else{
 
-                $_SESSION["success_messages"] = "<p class='success_message'>Мероприятие добавлено! <br />Теперь Вы можете просмотреть его на главной странице.</p>";
+                // $_SESSION["success_messages"] = "<p class='success_message'>Мероприятие добавлено! <br />Теперь Вы можете просмотреть его на главной странице.</p>";
 
                 //Отправляем пользователя на страницу авторизации
                 header("HTTP/1.1 301 Moved Permanently");

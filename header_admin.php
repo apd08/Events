@@ -9,8 +9,8 @@
     <head>
         <title>Название нашего сайта</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="./css/styles.css">
-        <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+        <link rel="stylesheet" type="text/css" href="./css/style2.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
         <script src="https://kit.fontawesome.com/6aaabd05e2.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript">
@@ -81,10 +81,6 @@
             <a href="#" class="place_link">
                 <i class="fa-solid fa-location-dot" style="color: #f4f5f5;"></i>
                 <div class="header_place_text">Минск</div>
-            </a>
-            <a href="#" class="bookmark_link">
-                <i class="fa-solid fa-bookmark" style="color: #f4f5f5;"></i>
-                <div class="header_bookmark_text">Избранное</div>
             </a>
 
             <div id="auth_block">
